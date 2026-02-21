@@ -12,7 +12,7 @@ var lyr_Ortoimagen_0 = new ol.layer.Tile({
                             title: 'Ortoimagen',
                             popuplayertitle: 'Ortoimagen',
                             type: '',
-                            opacity: 1.000000,
+                            opacity: 0.500000,
                             
                             
                           });
@@ -102,27 +102,11 @@ var lyr_Respuestas_mayoritarias_4 = new ol.layer.Vector({
                 popuplayertitle: 'Respuestas_mayoritarias',
                 interactive: true,
     title: 'Respuestas_mayoritarias<br />\
-    <img src="styles/legend/Respuestas_mayoritarias_4_0.png" /> Siesta del borrego  (78)<br />\
-    <img src="styles/legend/Respuestas_mayoritarias_4_1.png" /> Siesta del burro/burra  (16)<br />\
-    <img src="styles/legend/Respuestas_mayoritarias_4_2.png" /> Siesta del carnero  (8)<br />\
-    <img src="styles/legend/Respuestas_mayoritarias_4_3.png" /> Sin nombre  (4)<br />\
-    <img src="styles/legend/Respuestas_mayoritarias_4_4.png" /> Siesta  (3)<br />\
-    <img src="styles/legend/Respuestas_mayoritarias_4_5.png" /> Siesta del canónigo  (2)<br />\
-    <img src="styles/legend/Respuestas_mayoritarias_4_6.png" /> Siesta del obispo  (2)<br />\
-    <img src="styles/legend/Respuestas_mayoritarias_4_7.png" /> Embeltir-se  (2)<br />\
-    <img src="styles/legend/Respuestas_mayoritarias_4_8.png" /> Becada  (2)<br />\
-    <img src="styles/legend/Respuestas_mayoritarias_4_9.png" /> Siesta del vencejo  (1)<br />\
-    <img src="styles/legend/Respuestas_mayoritarias_4_10.png" /> Siesta del gato  (1)<br />\
-    <img src="styles/legend/Respuestas_mayoritarias_4_11.png" /> Siesta del cura  (1)<br />\
-    <img src="styles/legend/Respuestas_mayoritarias_4_12.png" /> Pigazu  (1)<br />\
-    <img src="styles/legend/Respuestas_mayoritarias_4_13.png" /> Siesta boba  (1)<br />\
-    <img src="styles/legend/Respuestas_mayoritarias_4_14.png" /> Microsiesta  (1)<br />\
-    <img src="styles/legend/Respuestas_mayoritarias_4_15.png" /> Nickerschen  (1)<br />\
-    <img src="styles/legend/Respuestas_mayoritarias_4_16.png" /> Cabezada  (1)<br />\
-    <img src="styles/legend/Respuestas_mayoritarias_4_17.png" /> Siesta del gorrión   (1)<br />\
-    <img src="styles/legend/Respuestas_mayoritarias_4_18.png" /> Siesta de la Monja  (1)<br />' });
+    <img src="styles/legend/Respuestas_mayoritarias_4_0.png" /> Siesta del borrego<br />\
+    <img src="styles/legend/Respuestas_mayoritarias_4_1.png" /> Siesta del burro/burra<br />\
+    <img src="styles/legend/Respuestas_mayoritarias_4_2.png" /> Siesta del carnero<br />' });
 
-lyr_Ortoimagen_0.setVisible(true);lyr_Referenciaprovincias_1.setVisible(true);lyr_provinciasnumpuntos_2.setVisible(true);lyr_Todoslospuntos_3.setVisible(true);lyr_Respuestas_mayoritarias_4.setVisible(true);
+lyr_Ortoimagen_0.setVisible(true);lyr_Referenciaprovincias_1.setVisible(true);lyr_provinciasnumpuntos_2.setVisible(false);lyr_Todoslospuntos_3.setVisible(true);lyr_Respuestas_mayoritarias_4.setVisible(true);
 var layersList = [lyr_Ortoimagen_0,lyr_Referenciaprovincias_1,lyr_provinciasnumpuntos_2,lyr_Todoslospuntos_3,lyr_Respuestas_mayoritarias_4];
 lyr_Referenciaprovincias_1.set('fieldAliases', {'fid': 'fid', 'INSPIREID': 'INSPIREID', 'COUNTRY': 'COUNTRY', 'NATLEV': 'NATLEV', 'NATLEVNAME': 'NATLEVNAME', 'NATCODE': 'NATCODE', 'NAMEUNIT': 'NAMEUNIT', 'CODNUT1': 'CODNUT1', 'CODNUT2': 'CODNUT2', 'CODNUT3': 'CODNUT3', });
 lyr_provinciasnumpuntos_2.set('fieldAliases', {'fid': 'fid', 'INSPIREID': 'INSPIREID', 'COUNTRY': 'COUNTRY', 'NATLEV': 'NATLEV', 'NATLEVNAME': 'NATLEVNAME', 'NATCODE': 'NATCODE', 'NAMEUNIT': 'NAMEUNIT', 'CODNUT1': 'CODNUT1', 'CODNUT2': 'CODNUT2', 'CODNUT3': 'CODNUT3', 'prov_norm': 'prov_norm', 'count': 'count', });

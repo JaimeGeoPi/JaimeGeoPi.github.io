@@ -1,13 +1,13 @@
 var size = 0;
 var placement = 'point';
-function categories_Respuestas_mayoritarias_4(feature, value, size, resolution, labelText,
+function categories_Todoslospuntos_3(feature, value, size, resolution, labelText,
                        labelFont, labelFill, bufferColor, bufferWidth,
                        placement) {
                 var valueStr = (value !== null && value !== undefined) ? value.toString() : 'default';
                 switch(valueStr) {case 'Siesta del borrego':
                     return [ new ol.style.Style({
         image: new ol.style.Circle({radius: 4.0 + size,
-            displacement: [0, 0], stroke: new ol.style.Stroke({color: 'rgba(35,35,35,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 0.0}), fill: new ol.style.Fill({color: 'rgba(218,49,30,1.0)'})}),
+            displacement: [0, 0], stroke: new ol.style.Stroke({color: 'rgba(35,35,35,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 0.0}), fill: new ol.style.Fill({color: 'rgba(1,124,255,1.0)'})}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)
@@ -16,7 +16,7 @@ function categories_Respuestas_mayoritarias_4(feature, value, size, resolution, 
 case 'Siesta del burro/burra':
                     return [ new ol.style.Style({
         image: new ol.style.Circle({radius: 4.0 + size,
-            displacement: [0, 0], stroke: new ol.style.Stroke({color: 'rgba(35,35,35,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 0.0}), fill: new ol.style.Fill({color: 'rgba(213,175,69,1.0)'})}),
+            displacement: [0, 0], stroke: new ol.style.Stroke({color: 'rgba(35,35,35,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 0.0}), fill: new ol.style.Fill({color: 'rgba(255,26,1,1.0)'})}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)
@@ -25,7 +25,7 @@ case 'Siesta del burro/burra':
 case 'Siesta del carnero':
                     return [ new ol.style.Style({
         image: new ol.style.Circle({radius: 4.0 + size,
-            displacement: [0, 0], stroke: new ol.style.Stroke({color: 'rgba(35,35,35,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 0.0}), fill: new ol.style.Fill({color: 'rgba(211,101,236,1.0)'})}),
+            displacement: [0, 0], stroke: new ol.style.Stroke({color: 'rgba(35,35,35,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 0.0}), fill: new ol.style.Fill({color: 'rgba(254,3,246,1.0)'})}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)
@@ -176,7 +176,7 @@ case 'Siesta de la Monja':
     })];
                     break;}};
 
-var style_Respuestas_mayoritarias_4 = function(feature, resolution){
+var style_Todoslospuntos_3 = function(feature, resolution){
     var context = {
         feature: feature,
         variables: {}
@@ -192,11 +192,11 @@ var style_Respuestas_mayoritarias_4 = function(feature, resolution){
     var offsetX = 0;
     var offsetY = 0;
     var placement = 'point';
-    if ("" !== null) {
-        labelText = String("");
+    if (feature.get("Nombre_siesta") !== null) {
+        labelText = String(feature.get("Nombre_siesta"));
     }
     
-    var style = categories_Respuestas_mayoritarias_4(feature, value, size, resolution, labelText,
+    var style = categories_Todoslospuntos_3(feature, value, size, resolution, labelText,
                             labelFont, labelFill, bufferColor,
                             bufferWidth, placement);
 

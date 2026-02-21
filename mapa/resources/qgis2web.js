@@ -9,7 +9,7 @@ var map = new ol.Map({
 });
 
 //initial view - epsg:3857 coordinates if not "Match project CRS"
-map.getView().fit([-1424347.881218, 4095120.583152, 761393.406713, 5980529.134730], map.getSize());
+map.getView().fit([-998299.539373, 4330037.420832, 316289.040608, 5446487.452421], map.getSize());
 
 //full zooms only
 map.getView().setProperties({constrainResolution: true});
@@ -494,7 +494,56 @@ var bottomRightContainerDiv = document.getElementById('bottom-right-container')
 
 //title
 
+var Title = new ol.control.Control({
+    element: (() => {
+        var titleElement = document.createElement('div');
+        titleElement.className = 'top-left-title ol-control';
+        titleElement.innerHTML = '<h2 class="project-title">Nombres de la siesta "antes de comer"</h2>';
+        return titleElement;
+    })(),
+    target: 'top-left-container'
+});
+map.addControl(Title)
+    
 //abstract
+
+var Abstract = new ol.control.Control({
+    element: (() => {
+        var titleElement = document.createElement('div');
+        titleElement.className = 'top-left-abstract ol-control';
+        titleElement.id = 'abstract';
+
+        var linkElement = document.createElement('a');
+
+        if (153 > 240) {
+            linkElement.setAttribute("onmouseenter", "showAbstract()");
+            linkElement.setAttribute("onmouseleave", "hideAbstract()");
+            linkElement.innerHTML = 'i';
+
+            window.hideAbstract = function() {
+                linkElement.classList.add("project-abstract");
+                linkElement.classList.remove("project-abstract-uncollapsed");
+                linkElement.innerHTML = 'i';
+            }
+
+            window.showAbstract = function() {
+                linkElement.classList.remove("project-abstract");
+                linkElement.classList.add("project-abstract-uncollapsed");
+                linkElement.innerHTML = 'Resultados parciales de la encuesta:<br />https://forms.gle/WZDYehscrogh9tws9<br /><br />Cómo denominas a la siesta que se hace antes de comer (aunque no la practiques)';
+            }
+
+            hideAbstract();
+        } else {
+            linkElement.classList.add("project-abstract-uncollapsed");
+            linkElement.innerHTML = 'Resultados parciales de la encuesta:<br />https://forms.gle/WZDYehscrogh9tws9<br /><br />Cómo denominas a la siesta que se hace antes de comer (aunque no la practiques)';
+        }
+
+        titleElement.appendChild(linkElement);
+        return titleElement;
+    })(),
+    target: 'top-left-container'
+});
+map.addControl(Abstract);
 
 
 //geolocate
